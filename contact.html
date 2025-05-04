@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Galería de Arte Prisma</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Menú principal">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Galería Prisma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Obras destacadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="integrantes.html">Integrantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-light py-5 text-center">
+        <h1 class="display-4">Contáctanos</h1>
+    </header>
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-12 col-lg-6 mb-4">
+                <h2 class="h4">Envíanos un mensaje</h2>
+                <p>Teléfono: +56 9 1234 5678</p>
+                <p>Correo electrónico: contacto@galeriaprisma.cl</p>
+                <p>¿Tienes preguntas, quieres agendar una visita guiada o estás interesado/a en exponer con nosotros?</p>
+                <p>Escríbenos, estaremos encantados de ayudarte!</p>
+                <form action="/submit-contact" method="POST" class="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Tipo de solicitud:</label>
+                        <select name="asunto" id="asunto" class="form-select">
+                            <option value="compra">Compra</option>
+                            <option value="venta">Venta</option>
+                            <option value="consulta_general">Consulta general</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2 class="h4">Visítanos</h2>
+                <p>Dirección: Av. Libertador Bernardo O’Higgins 1234, Concepción, Chile</p>
+                <p>Horario: Lunes a Viernes de 10:00 a 18:00 hrs.</p>
+                <p>¡Te esperamos!</p>
+            </div>
+        </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

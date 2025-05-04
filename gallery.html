@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras Destacadas - Galería de Arte Prisma</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <nav aria-label="Menú principal" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Galería Prisma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Obras destacadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="integrantes.html">Integrantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-light py-5 text-center">
+        <h1 class="display-4">Obras Destacadas</h1>
+    </header>
+    <main class="container py-5">
+        <div class="gallery-grid row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Obra 1: Las Meninas -->
+            <article class="gallery-item col">
+                <div class="card h-100">
+                    <img src="meninas.jpg" alt="Las Meninas de Velázquez" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Las Meninas</h3>
+                        <p class="card-text"><strong>Las Meninas</strong> es una de las obras más emblemáticas. La pintura muestra a la infanta Margarita Teresa rodeada de sus damas de honor, un perro y el propio Velázquez.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Autor:</strong> Diego Velázquez</li>
+                            <li><strong>Fecha:</strong> 1656</li>
+                            <li><strong>Técnica:</strong> Óleo sobre lienzo</li>
+                            <li><strong>Ubicación:</strong> Museo del Prado, Madrid</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <!-- Obra 2: La noche estrellada -->
+            <article class="gallery-item col">
+                <div class="card h-100">
+                    <img src="starrynight.jpg" alt="La noche estrellada de Van Gogh" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">La noche estrellada</h3>
+                        <p class="card-text"><strong>La noche estrellada</strong> captura la emoción y la belleza del cielo estrellado con vibrante uso del color y pinceladas dinámicas.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Autor:</strong> Vincent Van Gogh</li>
+                            <li><strong>Fecha:</strong> 1889</li>
+                            <li><strong>Técnica:</strong> Óleo sobre lienzo</li>
+                            <li><strong>Ubicación:</strong> Museo de Arte Moderno, Nueva York</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <!-- Obra 3: El grito -->
+            <article class="gallery-item col">
+                <div class="card h-100">
+                    <img src="el_grito.jpg" alt="El Grito de Edvard Munch" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">El grito</h3>
+                        <p class="card-text"><strong>El grito</strong> es una representación icónica del sufrimiento humano y la ansiedad existencial.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Autor:</strong> Edvard Munch</li>
+                            <li><strong>Fecha:</strong> 1893</li>
+                            <li><strong>Técnica:</strong> Óleo sobre cartón</li>
+                            <li><strong>Ubicación:</strong> Museo Munch, Oslo</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <!-- Obra 4: La joven de la perla -->
+            <article class="gallery-item col">
+                <div class="card h-100">
+                    <img src="joven_perla.jpg" alt="La joven de la perla de Vermeer" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">La joven de la perla</h3>
+                        <p class="card-text"><strong>La joven de la perla</strong> es reconocida por su uso magistral de la luz, el color y la expresión enigmática.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Autor:</strong> Johannes Vermeer</li>
+                            <li><strong>Fecha:</strong> 1665</li>
+                            <li><strong>Técnica:</strong> Óleo sobre lienzo</li>
+                            <li><strong>Ubicación:</strong> Museo Mauritshuis, La Haya</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
