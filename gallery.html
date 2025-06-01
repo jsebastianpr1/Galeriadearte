@@ -10,6 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="gallery.css">
+    <style>
+        .modal-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .gallery-item img, .gallery-item .card-title a {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <nav aria-label="Menú principal" class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -39,11 +51,11 @@
     <main class="container py-5">
         <div class="gallery-grid row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <!-- Obra 1: Las Meninas -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="Las Meninas" data-artist="Diego Velázquez" data-year="1656" data-technique="Óleo sobre lienzo" data-location="Museo del Prado, Madrid" data-description="Las Meninas es una de las obras más emblemáticas. La pintura muestra a la infanta Margarita Teresa rodeada de sus damas de honor, un perro y el propio Velázquez." data-img="meninas.jpg">
                 <div class="card h-100">
-                    <img src="meninas.jpg" alt="Las Meninas de Velázquez" class="card-img-top">
+                    <img src="meninas.jpg" alt="Las Meninas de Velázquez" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="meninas.jpg">Las Meninas</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">Las Meninas</a></h3>
                         <p class="card-text"><strong>Las Meninas</strong> es una de las obras más emblemáticas. La pintura muestra a la infanta Margarita Teresa rodeada de sus damas de honor, un perro y el propio Velázquez.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Diego Velázquez</li>
@@ -55,11 +67,11 @@
                 </div>
             </article>
             <!-- Obra 2: La noche estrellada -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="La noche estrellada" data-artist="Vincent van Gogh" data-year="1889" data-technique="Óleo sobre lienzo" data-location="Museo de Arte Moderno, Nueva York" data-description="La noche estrellada captura la emoción y la belleza del cielo estrellado con vibrante uso del color y pinceladas dinámicas." data-img="starrynight.jpg">
                 <div class="card h-100">
-                    <img src="starrynight.jpg" alt="La noche estrellada de Van Gogh" class="card-img-top">
+                    <img src="starrynight.jpg" alt="La noche estrellada de Van Gogh" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="starrynight.jpg">La noche estrellada</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">La noche estrellada</a></h3>
                         <p class="card-text"><strong>La noche estrellada</strong> captura la emoción y la belleza del cielo estrellado con vibrante uso del color y pinceladas dinámicas.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Vincent van Gogh</li>
@@ -71,11 +83,11 @@
                 </div>
             </article>
             <!-- Obra 3: La Creación de Adán -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="La Creación de Adán" data-artist="Miguel Ángel" data-year="c. 1512" data-technique="Fresco" data-location="Capilla Sixtina, Ciudad del Vaticano" data-description="La Creación de Adán es un fresco icónico que representa el momento en que Dios da vida a Adán, destacado por su dinamismo y la casi conexión de sus manos." data-img="creacionadam.jpg">
                 <div class="card h-100">
-                    <img src="creacionadam.jpg" alt="La Creación de Adán de Miguel Ángel" class="card-img-top">
+                    <img src="creacionadam.jpg" alt="La Creación de Adán de Miguel Ángel" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="creacionadam.jpg">La Creación de Adán</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">La Creación de Adán</a></h3>
                         <p class="card-text"><strong>La Creación de Adán</strong> es un fresco icónico que representa el momento en que Dios da vida a Adán, destacado por su dinamismo y la casi conexión de sus manos.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Miguel Ángel</li>
@@ -87,11 +99,11 @@
                 </div>
             </article>
             <!-- Obra 4: Las señoritas de Avignon -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="Las señoritas de Avignon" data-artist="Pablo Picasso" data-year="1907" data-technique="Óleo sobre lienzo" data-location="Museo de Arte Moderno (MoMA), Nueva York" data-description="Las señoritas de Avignon es una obra revolucionaria del cubismo, que rompe con las convenciones tradicionales de la perspectiva y la representación humana." data-img="las_senoritas.jpg">
                 <div class="card h-100">
-                    <img src="las_senoritas.jpg" alt="Las señoritas de Avignon de Pablo Picasso" class="card-img-top">
+                    <img src="las_senoritas.jpg" alt="Las señoritas de Avignon de Pablo Picasso" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="las_senoritas.jpg">Las señoritas de Avignon</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">Las señoritas de Avignon</a></h3>
                         <p class="card-text"><strong>Las señoritas de Avignon</strong> es una obra revolucionaria del cubismo, que rompe con las convenciones tradicionales de la perspectiva y la representación humana.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Pablo Picasso</li>
@@ -103,11 +115,11 @@
                 </div>
             </article>
             <!-- Obra 5: La Última Cena -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="La Última Cena" data-artist="Leonardo da Vinci" data-year="c. 1495-1498" data-technique="Témpera y óleo sobre yeso" data-location="Convento de Santa Maria delle Grazie, Milán" data-description="La Última Cena es un mural icónico que representa la última comida de Jesús con sus discípulos, destacado por su composición y expresividad." data-img="ultimacena.jpg">
                 <div class="card h-100">
-                    <img src="ultimacena.jpg" alt="La Última Cena de Leonardo da Vinci" class="card-img-top">
+                    <img src="ultimacena.jpg" alt="La Última Cena de Leonardo da Vinci" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="ultimacena.jpg">La Última Cena</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">La Última Cena</a></h3>
                         <p class="card-text"><strong>La Última Cena</strong> es un mural icónico que representa la última comida de Jesús con sus discípulos, destacado por su composición y expresividad.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Leonardo da Vinci</li>
@@ -119,11 +131,11 @@
                 </div>
             </article>
             <!-- Obra 6: Mona Lisa -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="Mona Lisa" data-artist="Leonardo da Vinci" data-year="c. 1503-1506" data-technique="Óleo sobre tabla" data-location="Museo del Louvre, París" data-description="Mona Lisa es una de las pinturas más reconocidas del mundo, famosa por su enigmática sonrisa y su innovador uso del sfumato." data-img="Monalisa.jpg">
                 <div class="card h-100">
-                    <img src="Monalisa.jpg" alt="Mona Lisa de Leonardo da Vinci" class="card-img-top">
+                    <img src="Monalisa.jpg" alt="Mona Lisa de Leonardo da Vinci" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="Monalisa.jpg">Mona Lisa</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">Mona Lisa</a></h3>
                         <p class="card-text"><strong>Mona Lisa</strong> es una de las pinturas más reconocidas del mundo, famosa por su enigmática sonrisa y su innovador uso del sfumato.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Leonardo da Vinci</li>
@@ -135,11 +147,11 @@
                 </div>
             </article>
             <!-- Obra 7: El grito -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="El grito" data-artist="Edvard Munch" data-year="1893" data-technique="Óleo sobre cartón" data-location="Museo Munch, Oslo" data-description="El grito es una representación icónica del sufrimiento humano y la ansiedad existencial." data-img="el_grito.jpg">
                 <div class="card h-100">
-                    <img src="el_grito.jpg" alt="El Grito de Edvard Munch" class="card-img-top">
+                    <img src="el_grito.jpg" alt="El Grito de Edvard Munch" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="el_grito.jpg">El grito</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">El grito</a></h3>
                         <p class="card-text"><strong>El grito</strong> es una representación icónica del sufrimiento humano y la ansiedad existencial.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Edvard Munch</li>
@@ -151,11 +163,11 @@
                 </div>
             </article>
             <!-- Obra 8: La joven de la perla -->
-            <article class="gallery-item col">
+            <article class="gallery-item col" data-title="La joven de la perla" data-artist="Johannes Vermeer" data-year="1665" data-technique="Óleo sobre lienzo" data-location="Museo Mauritshuis, La Haya" data-description="La joven de la perla es reconocida por su uso magistral de la luz, el color y la expresión enigmática." data-img="joven_perla.jpg">
                 <div class="card h-100">
-                    <img src="joven_perla.jpg" alt="La joven de la perla de Vermeer" class="card-img-top">
+                    <img src="joven_perla.jpg" alt="La joven de la perla de Vermeer" class="card-img-top" data-bs-toggle="modal" data-bs-target="#artModal">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="joven_perla.jpg">La joven de la perla</a></h3>
+                        <h3 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#artModal">La joven de la perla</a></h3>
                         <p class="card-text"><strong>La joven de la perla</strong> es reconocida por su uso magistral de la luz, el color y la expresión enigmática.</p>
                         <ul class="list-unstyled">
                             <li><strong>Autor:</strong> Johannes Vermeer</li>
@@ -167,12 +179,90 @@
                 </div>
             </article>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="artModal" tabindex="-1" aria-labelledby="artModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modal-img" src="" alt="" class="modal-img">
+                        <p><strong>Descripción:</strong> <span id="modal-description"></span></p>
+                        <p><strong>Autor:</strong> <span id="modal-artist"></span></p>
+                        <p><strong>Fecha:</strong> <span id="modal-year"></span></p>
+                        <p><strong>Técnica:</strong> <span id="modal-technique"></span></p>
+                        <p><strong>Ubicación:</strong> <span id="modal-location"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Galería de Arte Prisma. Todos los derechos reservados.</p>
+        <p>© 2025 Galería de Arte Prisma. Todos los derechos reservados.</p>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const artworks = document.querySelectorAll('.gallery-item');
+            const modal = new bootstrap.Modal(document.getElementById('artModal'));
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalArtist = document.getElementById('modal-artist');
+            const modalYear = document.getElementById('modal-year');
+            const modalTechnique = document.getElementById('modal-technique');
+            const modalLocation = document.getElementById('modal-location');
+
+            // Función para cerrar el modal
+            function closeModal() {
+                modal.hide();
+            }
+
+            artworks.forEach(artwork => {
+                const img = artwork.querySelector('.card-img-top');
+                const titleLink = artwork.querySelector('.card-title a');
+
+                // Evento para la imagen
+                img.addEventListener('click', () => {
+                    modalImg.src = artwork.dataset.img;
+                    modalImg.alt = artwork.dataset.title;
+                    modalTitle.textContent = artwork.dataset.title;
+                    modalDescription.textContent = artwork.dataset.description;
+                    modalArtist.textContent = artwork.dataset.artist;
+                    modalYear.textContent = artwork.dataset.year;
+                    modalTechnique.textContent = artwork.dataset.technique;
+                    modalLocation.textContent = artwork.dataset.location;
+                    modal.show();
+                });
+
+                // Evento para el título
+                titleLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modalImg.src = artwork.dataset.img;
+                    modalImg.alt = artwork.dataset.title;
+                    modalTitle.textContent = artwork.dataset.title;
+                    modalDescription.textContent = artwork.dataset.description;
+                    modalArtist.textContent = artwork.dataset.artist;
+                    modalYear.textContent = artwork.dataset.year;
+                    modalTechnique.textContent = artwork.dataset.technique;
+                    modalLocation.textContent = artwork.dataset.location;
+                    modal.show();
+                });
+            });
+
+            // Evento para cerrar con la tecla Escape (ya manejado por Bootstrap, pero reforzado)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal._isShown) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-```
