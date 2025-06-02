@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos - Galería de Arte Prisma</title>
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="contact.css">
 </head>
+ 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Menú principal">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Galería </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,33 +48,42 @@
                 <h2 class="h4">Envíanos un mensaje</h2>
                 <p>Teléfono: +56 9 </p>
                 <p>Correo electrónico: contacto@galeriaprisma.cl</p>
-                <p>¿Tienes preguntas, quieres agendar una visita guiada o estás interesado/a en exponer con nosotros?</p>
+                <p>¿Tienes preguntas, quieres agendar una visita guiada o estás interesado/a en exponer con nosotros?
+                </p>
                 <p>Escríbenos, estaremos encantados de ayudarte!</p>
                 <form action="/submit-contact" method="POST" class="contact-form">
                     <div id="form-errors" class="alert alert-danger d-none" role="alert"></div>
                     <div class="mb-3">
                         <label for="name" class="form-label" aria-label="Nombre completo">Nombre completo:</label>
-                        <input type="text" id="name" name="name" class="form-control" required aria-label="Ingresa tu nombre completo">
+                        <input type="text" id="name" name="name" class="form-control"
+                            aria-label="Ingresa tu nombre completo">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label" aria-label="Correo electrónico">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" class="form-control" required aria-label="Ingresa tu correo electrónico">
+                        <label for="email" class="form-label" aria-label="Correo electrónico">Correo
+                            electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            aria-label="Ingresa tu correo electrónico">
                     </div>
                     <div class="mb-3">
-                        <label for="phone" class="form-label" aria-label="Número de teléfono">Número de teléfono (formato chileno):</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required pattern="^\+?56\s?9\d{8}$" placeholder="+56 9 12345678" aria-label="Ingresa tu número de teléfono">
+                        <label for="phone" class="form-label" aria-label="Número de teléfono">Número de teléfono
+                            (formato chileno):</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" pattern="^\+?56\s?9\d{8}$"
+                            placeholder="+56 9 12345678" aria-label="Ingresa tu número de teléfono">
                     </div>
                     <div class="mb-3">
                         <label for="asunto" class="form-label" aria-label="Tipo de solicitud">Tipo de solicitud:</label>
-                        <select name="asunto" id="asunto" class="form-select" aria-label="Selecciona el tipo de solicitud">
+                        <select name="asunto" id="asunto" class="form-select"
+                            aria-label="Selecciona el tipo de solicitud">
                             <option value="compra">Compra de obra</option>
                             <option value="venta">Venta de obra</option>
                             <option value="consulta_general">Consulta general</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label" aria-label="Mensaje">Mensaje (cuéntanos en detalle tu consulta):</label>
-                        <textarea id="message" name="message" rows="5" class="form-control" required aria-label="Escribe tu mensaje"></textarea>
+                        <label for="message" class="form-label" aria-label="Mensaje">Mensaje (cuéntanos en detalle tu
+                            consulta):</label>
+                        <textarea id="message" name="message" rows="5" class="form-control"
+                            aria-label="Escribe tu mensaje"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
@@ -76,13 +91,14 @@
                     <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
                 </a>
                 <p class="small text-muted mt-3">
-                    Los datos enviados serán utilizados solo para responder a tu consulta. No compartiremos tu información con terceros.
+                    Los datos enviados serán utilizados solo para responder a tu consulta. No compartiremos tu
+                    información con terceros.
                 </p>
             </div>
             <div class="col-12 col-lg-6">
                 <h2 class="h4">¿Dónde estamos?</h2>
                 <div class="ratio ratio-16x9 mb-4">
-                    <iframe 
+                    <iframe
                         src="https://www.google.com/maps?q=Av.+Libertador+Bernardo+O’Higgins+1234,+Concepción,+Chile&output=embed"
                         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -105,12 +121,28 @@
         </div>
     </footer>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const form = document.querySelector('.contact-form');
             const errorDiv = document.getElementById('form-errors');
-            form.addEventListener('submit', function(e) {
+            const messageField = document.getElementById('message');
+            const asuntoField = document.getElementById('asunto');
+ 
+            messageField.addEventListener('input', function () {
+                const messageText = this.value.toLowerCase();
+                if (messageText.includes('compra')) {
+                    asuntoField.value = 'compra';
+                } else if (messageText.includes('venta')) {
+                    asuntoField.value = 'venta';
+                }
+            });
+ 
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+ 
                 const name = document.getElementById('name').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const phone = document.getElementById('phone').value.trim();
@@ -118,39 +150,45 @@
                 const message = document.getElementById('message').value.trim();
                 let valid = true;
                 let errorMsg = '';
-
-                // Validar nombre
+ 
                 if (name === '') {
                     valid = false;
-                    errorMsg += 'Por favor, ingresa tu nombre.<br>';
+                    errorMsg += 'El nombre es obligatorio.\n';
                 }
-                // Validar email
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (email === '' || !emailPattern.test(email)) {
+ 
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === '') {
                     valid = false;
-                    errorMsg += 'Por favor, ingresa un email válido.<br>';
-                }
-                // Validar teléfono chileno
-                const phonePattern = /^\+?56\s?9\d{8}$/;
-                if (phone === '' || !phonePattern.test(phone)) {
+                    errorMsg += 'El email es obligatorio.\n';
+                } else if (!emailRegex.test(email)) {
                     valid = false;
-                    errorMsg += 'Por favor, ingresa un teléfono válido en formato +56 9 12345678.<br>';
+                    errorMsg += 'El email no tiene un formato válido.\n';
                 }
-                // Validar mensaje
+ 
+                if (phone !== '' && !/^\+?[\d\s\-\(\)]{8,}$/.test(phone)) {
+                    valid = false;
+                    errorMsg += 'El teléfono no tiene un formato válido.\n';
+                }
+ 
+                if (asunto === '') {
+                    valid = false;
+                    errorMsg += 'Debe seleccionar un asunto.\n';
+                }
+ 
                 if (message === '') {
                     valid = false;
-                    errorMsg += 'Por favor, escribe tu mensaje.<br>';
+                    errorMsg += 'El mensaje es obligatorio.\n';
                 }
-
-                if (!valid) {
-                    e.preventDefault();
-                    errorDiv.innerHTML = errorMsg;
-                    errorDiv.classList.remove('d-none');
+ 
+                if (valid) {
+                    alert('¡Formulario válido! Su mensaje ha sido enviado correctamente.');
+                    form.reset();
                 } else {
-                    errorDiv.classList.add('d-none');
+                    alert('Formulario no válido:\n\n' + errorMsg);
                 }
             });
         });
     </script>
 </body>
+ 
 </html>
