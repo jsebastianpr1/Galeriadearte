@@ -11,6 +11,19 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #F8F9FA;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Fondo semitransparente para el contenido principal */
+main, section.container, header, .container {
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(1px);
 }
 
 /* Typography */
@@ -119,6 +132,31 @@ main {
 
 .row {
     align-items: center;
+}
+
+/* Footer */
+.footer-verde {
+    background-color: #145a32 !important; /* Verde oscuro */
+}
+
+/* Animación para h1 y h2 del header */
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: fadeSlideDown 1s ease-out;
+}
+
+header h2 {
+    animation: fadeSlideDown 1s 0.5s ease-out backwards;
 }
 
 /* Responsive Design */

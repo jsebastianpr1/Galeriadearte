@@ -45,38 +45,112 @@
                 <p>¿Tienes preguntas, quieres agendar una visita guiada o estás interesado/a en exponer con nosotros?</p>
                 <p>Escríbenos, estaremos encantados de ayudarte!</p>
                 <form action="/submit-contact" method="POST" class="contact-form">
+                    <div id="form-errors" class="alert alert-danger d-none" role="alert"></div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nombre:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+                        <label for="name" class="form-label" aria-label="Nombre completo">Nombre completo:</label>
+                        <input type="text" id="name" name="name" class="form-control" required aria-label="Ingresa tu nombre completo">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+                        <label for="email" class="form-label" aria-label="Correo electrónico">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control" required aria-label="Ingresa tu correo electrónico">
                     </div>
                     <div class="mb-3">
-                        <label for="asunto" class="form-label">Tipo de solicitud:</label>
-                        <select name="asunto" id="asunto" class="form-select">
-                            <option value="compra">Compra</option>
-                            <option value="venta">Venta</option>
+                        <label for="phone" class="form-label" aria-label="Número de teléfono">Número de teléfono (formato chileno):</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required pattern="^\+?56\s?9\d{8}$" placeholder="+56 9 12345678" aria-label="Ingresa tu número de teléfono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label" aria-label="Tipo de solicitud">Tipo de solicitud:</label>
+                        <select name="asunto" id="asunto" class="form-select" aria-label="Selecciona el tipo de solicitud">
+                            <option value="compra">Compra de obra</option>
+                            <option value="venta">Venta de obra</option>
                             <option value="consulta_general">Consulta general</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label">Mensaje:</label>
-                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                        <label for="message" class="form-label" aria-label="Mensaje">Mensaje (cuéntanos en detalle tu consulta):</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" required aria-label="Escribe tu mensaje"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
+                <a href="https://wa.me/56912345678" class="btn btn-success my-3" target="_blank">
+                    <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
+                </a>
+                <p class="small text-muted mt-3">
+                    Los datos enviados serán utilizados solo para responder a tu consulta. No compartiremos tu información con terceros.
+                </p>
             </div>
             <div class="col-12 col-lg-6">
-                <h2 class="h4">Visítanos</h2>
+                <h2 class="h4">¿Dónde estamos?</h2>
+                <div class="ratio ratio-16x9 mb-4">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Av.+Libertador+Bernardo+O’Higgins+1234,+Concepción,+Chile&output=embed"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
                 <p>Dirección: Av. Libertador Bernardo O’Higgins 1234, Concepción, Chile</p>
                 <p>Horario: Lunes a Viernes de 10:00 a 18:00 hrs.</p>
                 <p>¡Te esperamos!</p>
             </div>
         </div>
     </main>
+    <footer class="footer-verde text-white text-center py-4">
+        <p class="mb-0">© 2025 Galería de Arte Prisma. Todos los derechos reservados.</p>
+        <p class="mb-0">Diseñado por Juan Padilla y Freddy Soto</p>
+        <div class="my-3">
+            <a href="https://www.facebook.com/galeriaprisma" target="_blank" class="me-2">
+                <img src="facebook-icon.svg" alt="Facebook" width="32">
+            </a>
+            <a href="https://www.instagram.com/galeriaprisma" target="_blank">
+                <img src="instagram-icon.svg" alt="Instagram" width="32">
+            </a>
+        </div>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            const errorDiv = document.getElementById('form-errors');
+            form.addEventListener('submit', function(e) {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const asunto = document.getElementById('asunto').value;
+                const message = document.getElementById('message').value.trim();
+                let valid = true;
+                let errorMsg = '';
+
+                // Validar nombre
+                if (name === '') {
+                    valid = false;
+                    errorMsg += 'Por favor, ingresa tu nombre.<br>';
+                }
+                // Validar email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === '' || !emailPattern.test(email)) {
+                    valid = false;
+                    errorMsg += 'Por favor, ingresa un email válido.<br>';
+                }
+                // Validar teléfono chileno
+                const phonePattern = /^\+?56\s?9\d{8}$/;
+                if (phone === '' || !phonePattern.test(phone)) {
+                    valid = false;
+                    errorMsg += 'Por favor, ingresa un teléfono válido en formato +56 9 12345678.<br>';
+                }
+                // Validar mensaje
+                if (message === '') {
+                    valid = false;
+                    errorMsg += 'Por favor, escribe tu mensaje.<br>';
+                }
+
+                if (!valid) {
+                    e.preventDefault();
+                    errorDiv.innerHTML = errorMsg;
+                    errorDiv.classList.remove('d-none');
+                } else {
+                    errorDiv.classList.add('d-none');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
